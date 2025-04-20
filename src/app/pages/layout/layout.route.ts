@@ -10,8 +10,40 @@ export const LAYOUT_ROUTES: Routes = [
       {
         path: 'home',
         loadChildren: () =>
-          import('./sub-pages/home/home.route').then((m) => m.HOME_ROUTES),
+          import('./home/home.route').then((m) => m.HOME_ROUTES),
       },
+
+      {
+        path: 'product/:id',
+        loadChildren: () =>
+        import('./product/product.route').then((m) => m.PRODUCT_ROUTES),
+      },
+      {
+        path: 'product-detail/:id',
+        loadChildren: () =>
+          import('./product-detail/product-detail.route').then(
+            (m) => m.PRODUCT_DETAIL_ROUTES,
+          ),
+      },
+      {
+        path: 'checkout/:id',
+        loadChildren: () =>
+          import('./checkout/checkout.route').then((m) => m.CHECKOUT_ROUTES),
+      },
+      {
+        path: 'cart',
+        loadChildren: () =>
+          import('./cart/cart.route').then((m) => m.CART_ROUTES),
+      },
+      {
+        path: 'profile',
+        loadChildren: () =>
+          import('./profile/profile.route').then(
+            (m) => m.PROFILE_ROUTES,
+          ),
+      },
+
+
       // {
       //   path: 'book-info/:id',
       //   loadChildren: () =>
@@ -19,13 +51,7 @@ export const LAYOUT_ROUTES: Routes = [
       //       (m) => m.BOOK_INFO_ROUTES,
       //     ),
       // },
-      // {
-      //   path: 'profile',
-      //   loadChildren: () =>
-      //     import('./sub-pages/profile/profile.route').then(
-      //       (m) => m.PROFILE_ROUTES,
-      //     ),
-      // },
+
       // {
       //   path: 'admin',
       //   loadChildren: () =>

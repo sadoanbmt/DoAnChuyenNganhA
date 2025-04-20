@@ -1,1 +1,69 @@
-<p>navbar works!</p>
+<mat-toolbar class="harmony-navbar">
+  <!-- Logo section -->
+  <div class="logo-section">
+    <span class="harmony-logo" (click)="navigate('/')">HARMONY</span>
+  </div>
+
+  <!-- Navigation links -->
+  <nav class="nav-links">
+    <a class="nav-link" (click)="navigate('/product/1')">Áo</a>
+    <a class="nav-link" (click)="navigate('/product/2')">Quần</a>
+    <a class="nav-link" (click)="navigate('/product/3')">Khuyến Mãi</a>
+  </nav>
+
+  <span class="spacer"></span>
+
+  <!-- Search bar -->
+  <mat-form-field appearance="outline" class="harmony-search">
+    <mat-icon matPrefix>search</mat-icon>
+    <input
+      matInput
+      placeholder="Tìm kiếm sản phẩm..."
+      [(ngModel)]="searchQuery"
+      (input)="onSearchInput()"
+      #searchInput
+    />
+    <mat-icon matSuffix *ngIf="searchQuery" (click)="clearSearch()">close</mat-icon>
+
+    <!-- Search dropdown -->
+    <div class="dropdown" *ngIf="showDropdown">
+      <div class="dropdown-item" *ngIf="isSearching">
+        <div class="spinner">
+          <mat-spinner diameter="24"></mat-spinner>
+        </div>
+      </div>
+
+      <div class="dropdown-item" *ngIf="!isSearching && searchResults.length === 0">
+        <div class="no-results">Không tìm thấy kết quả</div>
+      </div>
+
+      <div class="dropdown-item"
+           *ngFor="let product of searchResults"
+           (click)="navigateToProduct(product)">
+        <img [src]="product.image" [alt]="product.name" />
+        <div class="product-info">
+          <span class="name"><b>{{ product.name }}</b></span>
+          <span class="price">{{ product.price | currency:'VND':'symbol':'1.0-0' }}</span>
+        </div>
+      </div>
+    </div>
+  </mat-form-field>
+
+  <!-- User section -->
+  <div class="user-section">
+    <button mat-icon-button [matMenuTriggerFor]="userMenu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+
+    <mat-menu #userMenu="matMenu">
+      <button mat-menu-item (click)="navigate('/profile')">
+        <mat-icon>person</mat-icon>
+        <span>Hồ sơ</span>
+      </button>
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span>Đăng xuất</span>
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>

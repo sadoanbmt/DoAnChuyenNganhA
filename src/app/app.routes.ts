@@ -16,6 +16,13 @@ export const routes: Routes = [
       import('./pages/layout/layout.route').then((m) => m.LAYOUT_ROUTES),
     // canMatch: [AuthGuards.canMatchMain],
   },
+
+  {
+    path: '',
+    loadChildren: () =>
+      import('./pages/login/login.route').then((m) => m.LOGIN_ROUTES),
+    // canMatch: [AuthGuards.canMatchMain],
+  },
   // {
   //   path: 'loading',
   //   loadChildren: () =>
