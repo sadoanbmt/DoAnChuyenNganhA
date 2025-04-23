@@ -3,8 +3,8 @@
         {
             "id": 1,
             "sku": "PRO-001",
-            "title": "Giày Sneaker Trắng",
-            "category": "Giày thể thao",
+            "title": "Áo sơ mi",
+            "category": "Áo",
             "description": "Áo sơ mi ngắn tay, kiểu dáng Slim Fit ôm, tôn dáng, áo tà bầu. Màu sắc và kiểu dáng trẻ trung, kiểu dáng hiện đại, dễ phối đồ. Chất liệu: 20% Modal, 80% Polyester",
             "price": 850000,
             "price_discount": 750000,
@@ -25,14 +25,14 @@
                 "http://localhost:4200/public/assets/images/bone.jpeg"
             ],
             "quantity": 10,
-            "slug": "giay-sneaker-trang"
+            "slug": "ao-so-mi"
         },
         {
             "id": 2,
             "sku": "PRO-002",
-            "title": "Giày Sneaker Trắng",
-            "category": "Giày thể thao",
-            "description": "Áo sơ mi ngắn tay, kiểu dáng Slim Fit ôm, tôn dáng, áo tà bầu. Màu sắc và kiểu dáng trẻ trung, kiểu dáng hiện đại, dễ phối đồ. Chất liệu: 20% Modal, 80% Polyester",
+            "title": "Áo thun",
+            "category": "Áo",
+            "description": "Áo thun đơn giản, tay ngắn. Màu sắc và kiểu dáng trẻ trung, kiểu dáng hiện đại, dễ phối đồ. Chất liệu: 20% Modal, 80% Polyester",
             "price": 850000,
             "price_discount": 750000,
             "unit": "VND",
@@ -52,14 +52,14 @@
                 "http://localhost:4200/public/assets/images/bone.jpeg"
             ],
             "quantity": 10,
-            "slug": "giay-sneaker-trang"
+            "slug": "ao-thun"
         },
         {
             "id": 3,
             "sku": "PRO-003",
-            "title": "Giày Sneaker Trắng",
-            "description": "Áo sơ mi ngắn tay, kiểu dáng Slim Fit ôm, tôn dáng, áo tà bầu. Màu sắc và kiểu dáng trẻ trung, kiểu dáng hiện đại, dễ phối đồ. Chất liệu: 20% Modal, 80% Polyester",
-            "category": "Giày thể thao",
+            "title": "Áo sơ mi dài tay",
+            "description": "Áo sơ mi dài tay, kiểu dáng Slim Fit ôm, tôn dáng, áo tà bầu. Màu sắc và kiểu dáng trẻ trung, kiểu dáng hiện đại, dễ phối đồ. Chất liệu: 20% Modal, 80% Polyester",
+            "category": "Áo",
             "price": 850000,
             "price_discount": 750000,
             "unit": "VND",
@@ -79,7 +79,7 @@
                 "http://localhost:4200/public/assets/images/bone.jpeg"
             ],
             "quantity": 10,
-            "slug": "giay-sneaker-trang"
+            "slug": "giay-so-mi"
         }
     ]
 }

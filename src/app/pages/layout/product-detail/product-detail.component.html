@@ -1,13 +1,13 @@
 <div class="details-page">
     <div class="details-container">
-        <!-- 🔷 BREADCRUMB -->
+
         <nav class="breadcrumb">
             <a routerLink="/">Trang chủ</a> |
             <span>{{ product?.category }}</span> |
             <span>{{ product?.title }}</span>
         </nav>
 
-        <!-- 🔷 CHI TIẾT SẢN PHẨM -->
+
         <div class="product-detail">
             <div class="gallery">
                 <img class="main-image" [src]="selectedImage || product?.thumbnail" alt="Ảnh chính" />
@@ -42,7 +42,6 @@
 
                 </div>
 
-                <!-- 🔷 HƯỚNG DẪN CHỌN SIZE -->
                 <div class="size-table" *ngIf="showSizeGuide">
                     <table>
                         <tr>
@@ -68,7 +67,6 @@
                     </table>
                 </div>
 
-                <!-- 🔷 MÔ TẢ SẢN PHẨM -->
                 <div class="description">
                     <h3>Mô tả sản phẩm</h3>
                     <p>{{ product?.description }}</p>
@@ -78,7 +76,7 @@
             </div>
         </div>
 
-        <!-- 🔷 SẢN PHẨM LIÊN QUAN -->
+
         <section class="related-products" *ngIf="relatedProducts?.length">
             <h2>CÓ THỂ BẠN QUAN TÂM</h2>
             <div class="products">
