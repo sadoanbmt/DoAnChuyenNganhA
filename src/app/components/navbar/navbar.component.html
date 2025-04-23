@@ -1,4 +1,4 @@
-<mat-toolbar class="mat-elevation-z0">
+<mat-toolbar class="mat-elevation-z0 ">
   <img
     [src]="'../../../../public/assets/logo/image-8.png'"
     alt="logo"
@@ -7,18 +7,15 @@
     id="logo-with-text"
     (click)="navigate('/home')"
   />
-
   <!-- Navigation links -->
-  <nav class="nav-links">
+  <div class="nav-links">
     <a class="nav-link" (click)="navigate('/product/1')">Áo</a>
     <a class="nav-link" (click)="navigate('/product/2')">Quần</a>
     <a class="nav-link" (click)="navigate('/product/3')">Khuyến Mãi</a>
-  </nav>
+  </div>
 
-  <span class="spacer"></span>
-
-  <!-- Search bar -->
-  <mat-form-field appearance="outline" class="harmony-search">
+<!--   //Search bar-->
+  <mat-form-field appearance="fill" class="example-spacer"  id="search-input">
     <mat-icon matPrefix>search</mat-icon>
     <input
       matInput
@@ -27,8 +24,6 @@
       (input)="onSearchInput()"
       #searchInput
     />
-    <mat-icon matSuffix *ngIf="searchQuery" (click)="clearSearch()">close</mat-icon>
-
     <!-- Search dropdown -->
     <div class="dropdown" *ngIf="showDropdown">
       <div class="dropdown-item" *ngIf="isSearching">
@@ -53,9 +48,61 @@
     </div>
   </mat-form-field>
 
+<!--  <span class="example-spacer"></span>-->
+<!--  <mat-form-field appearance="fill" id="search-input">-->
+<!--    <mat-icon matPrefix>search</mat-icon>-->
+<!--    <input-->
+<!--      matInput-->
+<!--      placeholder="Tìm kiếm sản phẩm..."-->
+<!--      (input)="onSearchInput()"-->
+<!--      #searchInput-->
+<!--    />-->
+<!--  </mat-form-field>-->
+
+
+<!--  @if (showDropdown) {-->
+<!--    <div class="dropdown" #dropdown>-->
+<!--      @if (loading$ | async) {-->
+<!--        <div class="spinner-overlay">-->
+<!--          <mat-progress-spinner></mat-progress-spinner>-->
+<!--        </div>-->
+<!--      }-->
+<!--      @if ((searchResults$ | async)?.length == 0 || (error$ | async)) {-->
+<!--        @if (showDropdown) {-->
+<!--          <div class="dropdown-item">-->
+<!--            <div class="name-author">Không tìm thấy kết quả</div>-->
+<!--          </div>-->
+<!--        }-->
+<!--      }-->
+<!--      @for (ebook of searchResults$ | async; track ebook) {-->
+<!--        @if (showDropdown) {-->
+<!--          <div class="dropdown-item" (click)="navigateToEbookDetailPage(ebook)">-->
+<!--            <img [src]="ebook.imageUrl" [alt]="ebook.name" />-->
+<!--            <div class="name-author">-->
+<!--              <span class="name"-->
+<!--              ><b>{{ ebook.name }}</b></span-->
+<!--              >-->
+<!--              <span class="author">{{ ebook.author }}</span>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        }-->
+<!--      }-->
+<!--    </div>-->
+<!--  }-->
+  <div id="cart">
+    <img src="../../../../public/assets/logo/shopping-cart.png" alt="cart"
+         height="42"
+         width="303"
+         id="shopping-cart"
+         (click)="navigate('/cart')"
+
+    />
+
+  </div>
   <!-- User section -->
-  <div class="user-section">
+  <div id="avatar">
     <button mat-icon-button [matMenuTriggerFor]="userMenu">
+
       <mat-icon>account_circle</mat-icon>
     </button>
 

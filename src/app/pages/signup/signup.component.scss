@@ -90,12 +90,12 @@
 
       .text-grp,
       #logo,
-      //#form {
-      //  width: calc(100% - 20px);
-      //  padding: 10px;
-      //  display: flex;
-      //  flex-direction: column;
-      //}
+        //#form {
+        //  width: calc(100% - 20px);
+        //  padding: 10px;
+        //  display: flex;
+        //  flex-direction: column;
+        //}
 
       #signInWithGoogle{
         width: 100%;
@@ -140,7 +140,7 @@
 
       #form1{
         width: 100%;
-        height: 55%;
+        height: 70%;
         display: flex;
         justify-content: space-evenly;
         flex-direction: column;
@@ -156,9 +156,9 @@
         height: auto;
       }
 
-        mat-form-field {
-          width: 60%;
-        }
+      mat-form-field {
+        width: 60%;
+      }
 
       .btn-grp {
         justify-content: space-between;
