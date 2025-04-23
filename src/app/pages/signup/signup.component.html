@@ -33,18 +33,19 @@
         <div id="form1">
           <mat-form-field appearance="outline">
             <mat-label>Số Điện Thoai</mat-label>
-            <input matInput formControlName="email" placeholder="Email" />
-            @if (signupForm.get("email")?.invalid) {
+            <input matInput formControlName="numberPhone" placeholder="SĐT" />
+            @if (signupForm.get("numberPhone")?.invalid) {
               <mat-error>SĐT không hợp lệ</mat-error>
             }
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>Tên</mat-label>
-            <input matInput formControlName="email" placeholder="Email" />
-            @if (signupForm.get("email")?.invalid) {
+            <input matInput formControlName="name" placeholder="Tên" />
+            @if (signupForm.get("name")?.invalid) {
               <mat-error>Tên không hợp lệ</mat-error>
             }
           </mat-form-field>
+
           <mat-form-field appearance="outline">
             <mat-label>Email</mat-label>
             <input matInput formControlName="email" placeholder="Email" />
@@ -52,6 +53,7 @@
               <mat-error>Email không hợp lệ</mat-error>
             }
           </mat-form-field>
+
           <mat-form-field appearance="outline">
             <mat-label>Tên Đăng Nhập</mat-label>
             <input matInput formControlName="email" placeholder="Email" />
@@ -59,6 +61,8 @@
               <mat-error>Tên đăng nhập không hợp lệ</mat-error>
             }
           </mat-form-field>
+
+
           <mat-form-field appearance="outline">
             <mat-label>Mật khẩu</mat-label>
             <input
