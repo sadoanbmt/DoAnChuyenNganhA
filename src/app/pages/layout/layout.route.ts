@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { LayoutComponent } from './layout.component';
+
 // import * as RoleGuards from '../../guards/role.guard';
 
 export const LAYOUT_ROUTES: Routes = [
