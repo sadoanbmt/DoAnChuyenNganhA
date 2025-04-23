@@ -1,1 +1,94 @@
-<p>product-detail works!</p>
+<div class="details-page">
+    <div class="details-container">
+        <!-- 🔷 BREADCRUMB -->
+        <nav class="breadcrumb">
+            <a routerLink="/">Trang chủ</a> |
+            <span>{{ product?.category }}</span> |
+            <span>{{ product?.title }}</span>
+        </nav>
+
+        <!-- 🔷 CHI TIẾT SẢN PHẨM -->
+        <div class="product-detail">
+            <div class="gallery">
+                <img class="main-image" [src]="selectedImage || product?.thumbnail" alt="Ảnh chính" />
+                <div class="thumbnails">
+                    <img *ngFor="let img of product?.images" [src]="img" (click)="selectedImage = img"
+                        [class.selected]="selectedImage === img" />
+                </div>
+            </div>
+
+            <div class="info">
+                <h1 class="title">{{ product?.title || 'TÊN SẢN PHẨM' }}</h1>
+                <p class="product-code">{{ product?.sku }}</p>
+                <p class="price">{{ product?.price | number }}đ</p>
+
+                <div class="options">
+                    <label>Màu sắc:</label>
+                    <div class="color-options">
+                        <span class="color black" [class.selected]="selectedColor === 'black'"
+                            (click)="selectedColor = 'black'"></span>
+                        <span class="color gray" [class.selected]="selectedColor === 'gray'"
+                            (click)="selectedColor = 'gray'"></span>
+                    </div>
+
+                    <label>Kích cỡ:</label>
+                    <div class="size-options">
+                        <button *ngFor="let size of ['S', 'M', 'L']" [class.selected]="selectedSize === size"
+                            (click)="selectedSize = size">
+                            {{ size }}
+                        </button>
+                    </div>
+                    <a href="#" class="size-guide" (click)="toggleSizeGuide($event)">Hướng dẫn chọn size</a>
+
+                </div>
+
+                <!-- 🔷 HƯỚNG DẪN CHỌN SIZE -->
+                <div class="size-table" *ngIf="showSizeGuide">
+                    <table>
+                        <tr>
+                            <th>Size</th>
+                            <th>Chiều cao (cm)</th>
+                            <th>Cân nặng (kg)</th>
+                        </tr>
+                        <tr>
+                            <td>S</td>
+                            <td>150 - 160</td>
+                            <td>40 - 50</td>
+                        </tr>
+                        <tr>
+                            <td>M</td>
+                            <td>160 - 170</td>
+                            <td>51 - 60</td>
+                        </tr>
+                        <tr>
+                            <td>L</td>
+                            <td>170 - 180</td>
+                            <td>61 - 70</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- 🔷 MÔ TẢ SẢN PHẨM -->
+                <div class="description">
+                    <h3>Mô tả sản phẩm</h3>
+                    <p>{{ product?.description }}</p>
+                </div>
+
+                <button class="add-to-cart" (click)="addToCart()">THÊM VÀO GIỎ HÀNG</button>
+            </div>
+        </div>
+
+        <!-- 🔷 SẢN PHẨM LIÊN QUAN -->
+        <section class="related-products" *ngIf="relatedProducts?.length">
+            <h2>CÓ THỂ BẠN QUAN TÂM</h2>
+            <div class="products">
+                <div class="item" *ngFor="let rp of relatedProducts">
+                    <img [src]="rp.thumbnail" />
+                    <p>{{ rp.title }}</p>
+                    <p class="price">{{ rp.price | number }}đ</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>

@@ -1,5 +1,5 @@
-import { Routes, RouterModule } from '@angular/router';
-import { ProductDetailComponent } from './product-detail.component';
+import {RouterModule, Routes} from '@angular/router';
+import {ProductDetailComponent} from './product-detail.component';
 
 export const PRODUCT_DETAIL_ROUTES: Routes = [
   {
