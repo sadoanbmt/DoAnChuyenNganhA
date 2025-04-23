@@ -39,19 +39,19 @@ export class NavbarComponent {
       id: 1,
       name: 'Áo thun nam cổ tròn',
       price: 199000,
-      image: 'assets/products/ao-thun.jpg'
+      // image: 'assets/products/ao-thun.jpg'
     },
     {
       id: 2,
       name: 'Quần jean nam ống đứng',
       price: 499000,
-      image: 'assets/products/quan-jean.jpg'
+      // image: 'assets/products/quan-jean.jpg'
     },
     {
       id: 3,
       name: 'Áo khoác gió unisex',
       price: 350000,
-      image: 'assets/products/ao-khoac.jpg'
+      // image: 'assets/products/ao-khoac.jpg'
     }
   ];
 
