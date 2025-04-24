@@ -7,7 +7,6 @@
             <span>{{ product?.title }}</span>
         </nav>
 
-
         <div class="product-detail">
             <div class="gallery">
                 <img class="main-image" [src]="selectedImage || product?.thumbnail" alt="Ảnh chính" />
@@ -75,8 +74,6 @@
                 <button class="add-to-cart" (click)="addToCart()">THÊM VÀO GIỎ HÀNG</button>
             </div>
         </div>
-
-
         <section class="related-products" *ngIf="relatedProducts?.length">
             <h2>CÓ THỂ BẠN QUAN TÂM</h2>
             <div class="products">

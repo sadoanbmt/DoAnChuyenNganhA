@@ -5,5 +5,6 @@ export const PRODUCT_DETAIL_ROUTES: Routes = [
   {
     path:'',
     component: ProductDetailComponent,
+
   }
 ]

@@ -14,7 +14,7 @@ import { ProductService } from './services/product.service';
     HttpClientModule,
   ],
   templateUrl: './product-detail.component.html',
-  styleUrls: ['./product-detail.component.scss']
+  styleUrl: './product-detail.component.scss'
 })
 
 export class ProductDetailComponent implements OnInit {
