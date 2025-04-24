@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ProductService } from './../../../services/product.service';
+import { ProductService } from './services/product.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -25,7 +25,6 @@ export class ProductDetailComponent implements OnInit {
   quantity = 1;
   relatedProducts: any[] = [];
 
-  // 👉 Thêm dòng này để tránh lỗi
   selectedImage: string | null = null;
   selectedColor: string = 'black';
   selectedSize: string = 'M';
