@@ -2,8 +2,8 @@
     <div class="details-container">
 
         <nav class="breadcrumb">
-            <a routerLink="/">Trang chủ</a> |
-            <span>{{ product?.category }}</span> |
+            <a routerLink="/">Trang chủ</a>
+            <span>{{ product?.category }}</span>
             <span>{{ product?.title }}</span>
         </nav>
 
@@ -23,7 +23,7 @@
                 <p class="price">{{ product?.price | number }}đ</p>
 
                 <div class="options">
-                    <label>Màu sắc:</label>
+                    <label>Màu sắc</label>
                     <div class="color-options">
                         <span class="color black" [class.selected]="selectedColor === 'black'"
                             (click)="selectedColor = 'black'"></span>
@@ -31,7 +31,7 @@
                             (click)="selectedColor = 'gray'"></span>
                     </div>
 
-                    <label>Kích cỡ:</label>
+                    <label>Kích cỡ</label>
                     <div class="size-options">
                         <button *ngFor="let size of ['S', 'M', 'L']" [class.selected]="selectedSize === size"
                             (click)="selectedSize = size">

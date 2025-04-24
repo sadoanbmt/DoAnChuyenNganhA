@@ -18,11 +18,11 @@
                 "Yellow",
                 "Blue"
             ],
-            "thumbnail": "http://localhost:4200/public/assets/images/bone.jpeg",
+            "thumbnail": "http://localhost:4200/public/assets/images/images.png",
             "images": [
-                "http://localhost:4200/public/assets/images/bone.jpeg",
-                "http://localhost:4200/public/assets/images/bone.jpeg",
-                "http://localhost:4200/public/assets/images/bone.jpeg"
+                "http://localhost:4200/public/assets/images/images.png",
+                "http://localhost:4200/public/assets/images/images.png",
+                "http://localhost:4200/public/assets/images/images.png"
             ],
             "quantity": 10,
             "slug": "ao-so-mi"
@@ -45,11 +45,11 @@
                 "Yellow",
                 "Blue"
             ],
-            "thumbnail": "http://localhost:4200/public/assets/images/bone.jpeg",
+            "thumbnail": "http://localhost:4200/public/assets/images/images.png",
             "images": [
-                "http://localhost:4200/public/assets/images/bone.jpeg",
-                "http://localhost:4200/public/assets/images/bone.jpeg",
-                "http://localhost:4200/public/assets/images/bone.jpeg"
+                "http://localhost:4200/public/assets/images/images.png",
+                "http://localhost:4200/public/assets/images/images.png",
+                "http://localhost:4200/public/assets/images/images.png"
             ],
             "quantity": 10,
             "slug": "ao-thun"
@@ -72,11 +72,11 @@
                 "Yellow",
                 "Blue"
             ],
-            "thumbnail": "http://localhost:4200/public/assets/images/bone.jpeg",
+            "thumbnail": "http://localhost:4200/public/assets/images/images.png",
             "images": [
-                "http://localhost:4200/public/assets/images/bone.jpeg",
-                "http://localhost:4200/public/assets/images/bone.jpeg",
-                "http://localhost:4200/public/assets/images/bone.jpeg"
+                "http://localhost:4200/public/assets/images/images.png",
+                "http://localhost:4200/public/assets/images/images.png",
+                "http://localhost:4200/public/assets/images/images.png"
             ],
             "quantity": 10,
             "slug": "giay-so-mi"
